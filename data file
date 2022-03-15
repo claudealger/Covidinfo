@@ -1,0 +1,24 @@
+import mysql.connector
+db1 = None
+def connect():
+    global db1
+    db1 = mysql.connector.connect(host="localhost",user="root",
+    password="Aditya@123#"
+  )
+
+connect()
+c1 = db1.cursor()
+c1.execute("drop database covidinfo")
+c1.execute("create database covidinfo")
+c1.execute("use covivdinfo")
+c1.execute("create table members (name varchar(30), passw varchar(30))")
+c1.execute("insert into members values(‘ADITYA’,’NEZUKO27’)")
+c1.execute("insert into members values(‘ABHINAV’,’NEZUKO24’)")
+c1.execute("insert into members values(‘SNEHIT’,’NEZUKO18’)")
+c1.execute("insert into members values('MAHIMA','NEZUKO14')")
+c1.execute("insert into members values('NISHA','NEZUKOuk')")
+cb1.commit()
+c1.execute("create table users(aadhar varchar(20),name varchar(50),address varchar(50),email varchar(50), phone varchar(20), age varchar(2))")
+c1.execute("create table vaccination(aadhar varchar(20),vname varchar(50),dose1 date, dose2 date)")
+c1.execute("create table boosters(aadhar varchar(20), name varchar(20), boostd date")
+db1.commit()
